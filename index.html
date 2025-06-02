@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Head-->
-  
+
 <head>
+
+  <!-- Sweet Alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <!--Meta Tags-->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Welcome to Abdullah's portfolio website." />
   <!-- <link rel="icon" href="./assets/IMG/abalogo.jpeg" type="image/png" /> -->
-  <link rel="icon"
-    href="./assets/IMG/az.png"
-    type="image/png" />
+  <link rel="icon" href="./assets/IMG/az.png" type="image/png" />
   <meta name="author" content="Abdullah Bin Aslam" />
   <meta name="keywords" content="website, Portfolio, github, html, css, webdev, googlefont, freehost, html project" />
 
@@ -33,7 +40,9 @@
   <!--Favicon End-->
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <!--Head End-->
 
@@ -54,7 +63,8 @@
           <a href="#"><span>Home</span></a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="#work">Works</a>
+          <a href="#project">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
           <div class="nav_toggler_cancel">
             <span class="material-symbols-outlined" onclick="nav_expand();">close</span>
@@ -69,6 +79,7 @@
   <!--Header Section End-->
   <!--Main Section-->
   <main>
+
     <!--Home Section-->
     <div class="main-content home">
       <div id="particles-js"></div>
@@ -77,28 +88,36 @@
           <h1>
             <div class="main-content-text-text-text">Hi,</div>
             <div class="main-content-text-text-text">
-              I'am <span>Abdullah</span> 
+              I'am <span>Abdullah</span>
             </div>
             <div class="main-content-text-text-text running-text">
-              <span class="role"> </span> 
+              <span class="role"> </span>
             </div>
           </h1>
           <button class="btn main-btn" onclick="contact();">
             Contact Me
           </button>
+
         </div>
         <div class="main-content-text-social">
           <a target="_blank" href="https://www.instagram.com/abdullah_30_nov"><i class="fa-brands fa-instagram"></i></a>
-          <a target="_blank" href="https://www.linkedin.com/in/abdullah-30-nov"><i class="fa-brands fa-linkedin-in fa-2xs"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/abdullah-30-nov"><i
+              class="fa-brands fa-linkedin-in fa-2xs"></i></a>
           <a target="_blank" href="https://www.github.com/Abdullah30nov"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
       <div class="main-content-image">
-        <!-- <img src="assets/IMG/profile.png" alt="main-logo" /> -->
         <img src="assets/IMG/header-img.svg" alt="main-logo" />
+        <!-- "assets/IMG/219923809-b86dc415-a0c2-4a38-bc88-ad6cf06395a8.gif" -->
+        <!-- <img src=
+        "assets/IMG/Beige Simple Professional Twitter Profile Picture-Picsart-AiImageEnhancer.png"
+          alt="main-logo" /> -->
+        <div class="view_count" id="count">
+        </div>
       </div>
     </div>
     <!--Home Section End-->
+
     <!--About Section-->
     <div class="main-about about" id="about">
       <div class="main-contact-heading">
@@ -106,8 +125,8 @@
       </div>
       <div class="main-about-inner">
         <div class="main-about-image">
-          <!-- <img src="assets/IMG/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg" alt="author" /> -->
-          <img src="assets/IMG/profile.png" alt="main-logo" />
+          <!-- <img src="assets/IMG/profile.png" alt="main-logo" /> -->
+          <!-- <img src="assets/IMG/WhatsApp_Image_2025-05-15_at_00,14,39_0faaa94e-removebg-preview-Picsart-AiImageEnhancer.png" alt="main-logo" /> -->
         </div>
         <div class="main-about-text">
           <p style="text-align: justify">
@@ -124,12 +143,12 @@
             <p><span>Phone :</span> +923273895990</p>
             <p><span>Place :</span> Orangi Town, Karachi, Pakistan</p>
           </div>
-          <a href="assets/resum.pdf" download="assets/Abdullah Bin Aslam - Resume.pdf" target="_blank"
-            class="btn">Download CV</a>
+          <a href="assets/resum.pdf" target="_blank" class="btn">View My Resume</a>
         </div>
       </div>
     </div>
     <!--About Section End-->
+
     <!--Skill Section-->
     <div class="main-skill skills" id="skills">
       <div class="main-Section-heading">
@@ -210,20 +229,20 @@
               <circle class="skill-circle-inner skill-xyz-ve" cx="100" cy="100" r="80"></circle>
             </svg>
             <div class="skill-xyz-percent">75%</div>
-            <div class="skill-xyz-text">Hosting</div>
-          </div>
-          <div class="skilll-xyz-inner">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-              <circle class="skill-circle" cx="100" cy="100" r="70"></circle>
-              <circle class="skill-circle-inner skill-xyz-wd" cx="100" cy="100" r="70"></circle>
-            </svg>
-            <div class="skill-xyz-percent">65%</div>
-            <div class="skill-xyz-text">Web Dev</div>
+            <div class="skill-xyz-text">FrontEnd</div>
           </div>
           <div class="skilll-xyz-inner">
             <svg x="0px" y="0px" viewBox="0 0 200 200">
               <circle class="skill-circle" cx="100" cy="100" r="80"></circle>
-              <circle class="skill-circle-inner skill-xyz-ui" cx="100" cy="100" r="80"></circle>
+              <circle class="skill-circle-inner skill-xyz-wd" cx="100" cy="100" r="80"></circle>
+            </svg>
+            <div class="skill-xyz-percent">85%</div>
+            <div class="skill-xyz-text">Responsive</div>
+          </div>
+          <div class="skilll-xyz-inner">
+            <svg x="0px" y="0px" viewBox="0 0 200 200">
+              <circle class="skill-circle" cx="100" cy="100" r="80"></circle>
+              <circle class="skill-circle-inner skill-xyz-game" cx="100" cy="100" r="80"></circle>
             </svg>
             <div class="skill-xyz-percent">55%</div>
             <div class="skill-xyz-text">Database</div>
@@ -234,16 +253,17 @@
               <circle class="skill-circle-inner skill-xyz-game" cx="100" cy="100" r="80"></circle>
             </svg>
             <div class="skill-xyz-percent">50%</div>
-            <div class="skill-xyz-text">Frontend</div>
+            <div class="skill-xyz-text">API Handling</div>
           </div>
         </div>
       </div>
     </div>
     <!--Skill Section End-->
+
     <!--Work Section-->
-    <div class="main-work" id="work">
+    <div class="main-work" id="experience">
       <div class="main-Section-heading">
-        <h2>WORK</h2>
+        <h2>EXPERIENCE</h2>
       </div>
       <div class="main-work-div">
         <div class="service-container">
@@ -269,7 +289,9 @@
 
           <div class="services-box">
             <i class="fa-solid fa-database"></i>
-            <!-- <p ><script>SiLibrariesdotio</script></p> -->
+            <p>
+              <script>SiLibrariesdotio</script>
+            </p>
             <h3>Framework & Libraries</h3>
             <p>
               I'am Frontend developer with many framework and Libraries with real world texhnology just like: React.js,
@@ -280,17 +302,250 @@
         </div>
       </div>
     </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+
+          <div class="services-box">
+            <i class="fa-solid fa-code"></i>
+            <h3>Frontend Development</h3>
+            <p>
+              I'am frontend developer and develop many of projects with latest technologies using HTML,
+              CSS and JS & ReactJS. I started it 1 year before in 2024..
+            </p>
+            <a href=""><button class="btn">Learn More</button></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="services-box">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Mobile App Development</h3>
+            <p>
+              I'am mobile app developer and I started it 1 year before in 2023. I have built multiple login signup pages
+              and hardware configration and testing also..
+            </p>
+            <a href=""><button class="btn">Learn More</button></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="services-box">
+            <i class="fa-solid fa-database"></i>
+            <p>
+              <script>SiLibrariesdotio</script>
+            </p>
+            <h3>Framework & Libraries</h3>
+            <p>
+              I'am Frontend developer with many framework and Libraries with real world texhnology just like: React.js,
+              Bootstrap , Scss , Material UI & Axios..
+            </p>
+            <a href=""><button class="btn">Learn More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
     <!--Work Section End-->
+
+
+
+
     <!--Project Section-->
-    <div class="main-project">
+    <div class="main-project" id="project">
+
       <div class="main-Section-heading">
         <h2>PROJECTS</h2>
       </div>
       <div class="main-project-inner">
+
         <div class="main-project-div">
+
           <div class="main-project-div-inner">
             <div class="main-project-div-inner-img">
-              <img src="profile.png" alt="" />
+              <img src="assets/IMG/Screenshot (571).png" alt="" />
+            </div>
+            <div class="main-project-div-inner-data">
+              <div class="main-project-div-inner-data-h2">
+                <h2>EBIKE</h2>
+              </div>
+              <div class="main-project-div-inner-data-caption">
+                <p>
+                  As a Junior MERN Stack Developer at eBike.pk, I'm contributing to a dynamic Next.js and TypeScript
+                  project, focusing on crafting efficient and robust web solutions.
+                </p>
+              </div>
+              <div class="main-project-div-inner-data-btn">
+                <a href="https://ebike.pk" target="_blank"><button>Live Demo</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-project-div-inner">
+            <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Screenshot (572).png" alt="" />
+            </div>
+            <div class="main-project-div-inner-data">
+              <div class="main-project-div-inner-data-h2">
+                <h2>DNK Clothing Store</h2>
+              </div>
+              <div class="main-project-div-inner-data-caption">
+                <p>
+                  A React-based e-commerce app built with MUI for a modern, responsive design. It uses nested routing
+                  for smooth navigation and a dynamic shopping experience.
+                </p>
+              </div>
+              <div class="main-project-div-inner-data-btn">
+                <a href="https://dnk-clothing-store.surge.sh/" target="_blank"><button>Live Demo</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-project-div-inner">
+            <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Screenshot (573).png" alt="" />
+              <!-- <img src="d6da980c66a6d3e7c8aae4d4a643bc09.jpg" alt="" /> -->
+            </div>
+            <div class="main-project-div-inner-data">
+              <div class="main-project-div-inner-data-h2">
+                <h2>IOS Template</h2>
+              </div>
+              <div class="main-project-div-inner-data-caption">
+                <p>This project showcases a visually captivating landing page for the IOS Tepmlate, inspired by Apple's
+                  clean and minimalistic design philosophy. Using HTML, CSS, and Bootstrap, I have created a modern and
+                  responsive layout that highlights the premium feel of the device.</p>
+              </div>
+              <div class="main-project-div-inner-data-btn">
+                <a href="https://apple-by-abdullah.surge.sh/" target="_blank"><button>Live Demo</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-project-div-inner">
+            <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Screenshot (574).png" alt="" />
+            </div>
+            <div class="main-project-div-inner-data">
+              <div class="main-project-div-inner-data-h2">
+                <h2>GitHub User Finder</h2>
+              </div>
+              <div class="main-project-div-inner-data-caption">
+                <p>A responsive GitHub profile finder web app built with HTML and Bootstrap. It uses the GitHub API to
+                  fetch and display user profiles dynamically.</p>
+              </div>
+              <div class="main-project-div-inner-data-btn">
+                <a href="https://cute-github-finder.surge.sh/" target="_blank"><button>Live Demo</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="main-project-div-inner">
+              <div class="main-project-div-inner-img">
+                <img src="assets/IMG/Screenshot (571).png" alt="" />
+              </div>
+              <div class="main-project-div-inner-data">
+                <div class="main-project-div-inner-data-h2">
+                  <h2>EBIKE</h2>
+                </div>
+                <div class="main-project-div-inner-data-caption">
+                  <p>
+                    As a Junior MERN Stack Developer at eBike.pk, I'm contributing to a dynamic Next.js and TypeScript
+                    project, focusing on crafting efficient and robust web solutions.
+                  </p>
+                </div>
+                <div class="main-project-div-inner-data-btn">
+                  <a href="https://ebike.pk" target="_blank"><button>Live Demo</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="main-project-div-inner">
+              <div class="main-project-div-inner-img">
+                <img src="assets/IMG/Screenshot (572).png" alt="" />
+              </div>
+              <div class="main-project-div-inner-data">
+                <div class="main-project-div-inner-data-h2">
+                  <h2>DNK Clothing Store</h2>
+                </div>
+                <div class="main-project-div-inner-data-caption">
+                  <p>
+                    A React-based e-commerce app built with MUI for a modern, responsive design. It uses nested routing
+                    for smooth navigation and a dynamic shopping experience.
+                  </p>
+                </div>
+                <div class="main-project-div-inner-data-btn">
+                  <a href="https://dnk-clothing-store.surge.sh/" target="_blank"><button>Live Demo</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="main-project-div-inner">
+              <div class="main-project-div-inner-img">
+                <img src="assets/IMG/Screenshot (573).png" alt="" />
+                <!-- <img src="d6da980c66a6d3e7c8aae4d4a643bc09.jpg" alt="" /> -->
+              </div>
+              <div class="main-project-div-inner-data">
+                <div class="main-project-div-inner-data-h2">
+                  <h2>IOS Template</h2>
+                </div>
+                <div class="main-project-div-inner-data-caption">
+                  <p>This project showcases a visually captivating landing page for the IOS Tepmlate, inspired by
+                    Apple's
+                    clean and minimalistic design philosophy. Using HTML, CSS, and Bootstrap, I have created a modern
+                    and
+                    responsive layout that highlights the premium feel of the device.</p>
+                </div>
+                <div class="main-project-div-inner-data-btn">
+                  <a href="https://apple-by-abdullah.surge.sh/" target="_blank"><button>Live Demo</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="main-project-div-inner">
+              <div class="main-project-div-inner-img">
+                <img src="assets/IMG/Screenshot (574).png" alt="" />
+              </div>
+              <div class="main-project-div-inner-data">
+                <div class="main-project-div-inner-data-h2">
+                  <h2>GitHub User Finder</h2>
+                </div>
+                <div class="main-project-div-inner-data-caption">
+                  <p>A responsive GitHub profile finder web app built with HTML and Bootstrap. It uses the GitHub API to
+                    fetch and display user profiles dynamically.</p>
+                </div>
+                <div class="main-project-div-inner-data-btn">
+                  <a href="https://cute-github-finder.surge.sh/" target="_blank"><button>Live Demo</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+
+      <!-- <div class="main-project-inner">
+        <div class="main-project-div">
+
+          <div class="main-project-div-inner">
+            <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Neutral Pink Modern Circle Shape LinkedIn Profile Picture-Picsart-AiImageEnhancer (1).png" alt="" />
             </div>
             <div class="main-project-div-inner-data">
               <div class="main-project-div-inner-data-h2">
@@ -306,9 +561,9 @@
               </div>
             </div>
           </div>
-
           <div class="main-project-div-inner">
             <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Neutral Pink Modern Circle Shape LinkedIn Profile Picture-Picsart-AiImageEnhancer (1).png" alt="" />
               <img src="d6da980c66a6d3e7c8aae4d4a643bc09.jpg" alt="" />
             </div>
             <div class="main-project-div-inner-data">
@@ -327,6 +582,7 @@
           </div>
           <div class="main-project-div-inner">
             <div class="main-project-div-inner-img">
+              <img src="assets/IMG/Dark Red Neon Futuristic Instagram Profile Picture (3)-Picsart-AiImageEnhancer.png" alt="" />
               <img src="d6da980c66a6d3e7c8aae4d4a643bc09.jpg" alt="" />
             </div>
             <div class="main-project-div-inner-data">
@@ -342,43 +598,279 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!--Project Section End-->
+
+    <!-- Languages and Tool -->
+    <div class="main-tool">
+      <div class="main-tool-heading">
+        <h2>Languages & Tool</h2>
+      </div>
+      <div class="main-tool-inner">
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-html5-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-javascript-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-css3-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-typescript-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-react-original colored"></i>
+          </div>
+          <div class="icon-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-bulma-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-bootstrap-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-materialui-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+
+            <!-- <i class="devicon-tailwindcss-plain-wordmark colored"></i> -->
+
+            <i class="devicon-tailwindcss-original colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-sass-original colored"></i>
+          </div>
+          <div class="icon-box">
+
+            <i class="devicon-reactbootstrap-original colored"></i>
+
+            <!-- <i class="devicon-css3-plain colored"></i> -->
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-firebase-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-mongodb-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-nodemon-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-github-original colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-git-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-vscode-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-netlify-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-vercel-original colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-postman-plain colored"></i>
+          </div>
+        </div>
+
+        <div class="icon-inner">
+          <div class="icon-box">
+            <i class="devicon-nodejs-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-nextjs-plain colored"></i>
+          </div>
+          <div class="icon-box">
+            <i class="devicon-express-original colored" style="color: black;"></i>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-html5-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-css3-plain colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-typescript-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-react-original colored"></i>
+              </div>
+              <div class="icon-box">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-bulma-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-bootstrap-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-materialui-plain colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-tailwindcss-original colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-sass-original colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-reactbootstrap-original colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-firebase-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-mongodb-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-nodemon-plain colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-github-original colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-git-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-vscode-plain colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-netlify-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-vercel-original colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-postman-plain colored"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="icon-inner">
+              <div class="icon-box">
+                <i class="devicon-nodejs-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-nextjs-plain colored"></i>
+              </div>
+              <div class="icon-box">
+                <i class="devicon-express-original colored" style="color: black;"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </div>
+    <!-- Languages and Tool End -->
+
+
     <!--Contact Section-->
     <div class="main-contact contact" id="contact">
       <div class="main-contact-heading">
         <h2>CONTACT <span>US</span></h2>
       </div>
 
-      <form class="main-contact-form" action="#" onsubmit="submitFeedback()">
+      <form action="https://formsubmit.co/abdullahbinaslam64@gmail.com" method="POST" id="main-contact-form">
         <div class="input-div">
           <div class="input-div-icon"><i class="fa-solid fa-user"></i></div>
-          <input type="text" placeholder="NAME" class="input-name" id="input-name" required autocomplete="name" />
+          <input type="text" placeholder="NAME" name="name" class="input-name" required />
         </div>
 
         <div class="input-div">
-          <div class="input-div-icon">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <input type="email" placeholder="EMAIL" inputmode="email" class="input-email" id="input-email" required
-            autocomplete="email" />
+          <div class="input-div-icon"><i class="fa-solid fa-envelope"></i></div>
+          <input type="email" placeholder="EMAIL" name="email" class="input-email" required />
         </div>
+
         <div class="input-div">
           <div class="input-div-icon"><i class="fa-solid fa-phone"></i></div>
-          <input type="tel" placeholder="PHONE" inputmode="tel" class="input-phone" id="input-phone" required
-            autocomplete="tel" />
+          <input type="tel" placeholder="PHONE" name="phone" class="input-phone" required pattern="\d{11}"
+            maxlength="11" title="Phone number must be 11 digits" />
         </div>
 
         <div class="input-div">
           <div class="input-div-icon"><i class="fa-solid fa-filter"></i></div>
-          <input type="text" placeholder="SUBJECT" class="input-subject" id="input-subject" required />
+          <input type="text" placeholder="SUBJECT" name="subject" class="input-subject" required />
         </div>
+
         <div class="input-div">
-          <div class="input-div-icon">
-            <i class="fa-solid fa-message"></i>
-          </div>
-          <textarea name="input-message" id="input-message" rows="7" placeholder="MESSAGE" required></textarea>
+          <div class="input-div-icon"><i class="fa-solid fa-message"></i></div>
+          <textarea name="message" id="input-message" rows="7" placeholder="MESSAGE" required></textarea>
         </div>
 
         <button type="submit" class="btn">
@@ -387,40 +879,44 @@
       </form>
     </div>
     <!--Contact Section End-->
+
   </main>
   <!--Main Section End-->
+
+
+
+
   <!--Footer Section-->
   <footer class="footer">
     <div class="footer_upper">
       <div class="footer_upper_div">
         <h3>Projects</h3>
-        <a href="https://www.dnk.com">DNK Clothing Store</a>
-        <a href="">Ebike.pk</a>
-        <a href=""></a>
-        <a href="">HTML</a>
+        <a href="https://ebike.pk" target="_blank">Ebike.pk</a>
+        <a href="https://dnk-clothing-store.surge.sh/" target="_blank">DNK Clothing Store</a>
       </div>
       <div class="footer_upper_div">
         <h3>Us</h3>
-        <a href="about">About Us</a>
-        <a href="contact">Contact</a>
-        <a href="#">My Account</a>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#skills">Skills</a>
       </div>
       <div class="footer_upper_div">
         <h3>Certifications</h3>
-        <a href="assets/AbdullahBin Aslam-Jawan Pakistan S-certificate.pdf">Cisco CyberOps Associate</a>
+        <a href="assets/AbdullahBin Aslam-Jawan Pakistan S-certificate.pdf" target="_blank">Cisco CyberOps Associate</a>
         <a href="assets/AbdullahBin Aslam-Jawan Pakistan S-certificate.pdf"
           download="assets/AbdullahBin Aslam-Jawan Pakistan S-certificate.pdf">Download Certificate</a>
+        <a href="assets/resum.pdf" download="assets/resum.pdf">Download Resume</a>
       </div>
       <div class="footer_upper_div">
         <h3>Get In Touch</h3>
         <a class="flex align-centre gap5" href="tel:923273895990"><span><i class="fa fa-phone-square"
               aria-hidden="true"></i></span>+923273895990</a>
-        <a class="flex align-centre gap5" href="mailto:abdullahbinaslam87@gmail.com">
-          <span><i class="fa fa-envelope" aria-hidden="true"></i></span>abdullahbinaslam87@gmail.com</a>
+        <a class="flex align-centre gap5" href="mailto:abdullahbinaslam64@gmail.com">
+          <span><i class="fa fa-envelope" aria-hidden="true"></i></span>abdullahbinaslam64@gmail.com</a>
         <div class="footer_upper_div_4_social">
-          <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/abdullah-30-nov" target="_blank"><i class="fa fa-linkedin"
+              aria-hidden="true"></i></a>
           <a target="_blank" href="https://github.com/Abdullah30nov"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a target="_blank" href="#"><i class="fa fa-facebook aria-hidden=" true"></i></a>
           <a target="_blank" href="https://wa.me/923273895990"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
         </div>
       </div>
@@ -428,8 +924,10 @@
     <hr />
     <div class="footer_lower">
       <div class="main-content-text-social footer-social-lower">
-        <a target="_blank" href="#"><i class="fa fa-facebook aria-hidden=" true"></i></a>
-        <a target="_blank" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a target="_blank" href="https://instagram.com/abdullah_30_nov"><i class="fa fa-instagram aria-hidden="
+            true"></i></a>
+        <a target="_blank" href="https://linkedin.com/in/abdullah-30-nov"><i class="fa fa-linkedin"
+            aria-hidden="true"></i></a>
         <a target="_blank" href="https://github.com/Abdullah30nov"><i class="fa fa-github" aria-hidden="true"></i></a>
       </div>
       <div class="footer_lower_text">
@@ -438,6 +936,10 @@
     </div>
   </footer>
   <!--Footer Section End-->
+
+
+
+
   <!--Java Scripts-->
   <!--Icons Scripts-->
   <script src="https://kit.fontawesome.com/cdca6417c3.js" crossorigin="anonymous"></script>
@@ -457,6 +959,113 @@
   <!--Main Java Scripts-->
   <script src="assets/JS/script.js"></script>
   <!--Java Scripts End-->
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    document.getElementById("main-contact-form").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch("https://formsubmit.co/ajax/abdullahbinaslam64@gmail.com", {
+        method: "POST",
+        body: formData
+      })
+        .then(response => {
+          if (response.ok) {
+            Swal.fire({
+              icon: "success",
+              title: "Message Sent!",
+              text: "Thanks for contacting us. We'll get back to you soon."
+            });
+            form.reset(); // Clear form fields
+          } else {
+            throw new Error("Submission failed");
+          }
+        })
+        .catch(error => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. Please try again later."
+          });
+          console.error(error);
+        });
+    });
+  </script>
+
+  <script type="module">
+    const View = document.getElementById('count');
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCvzo-4USx1mvUQ0gRQS0BQgNOTOiRft9w",
+      authDomain: "portfolio-view-edc28.firebaseapp.com",
+      databaseURL: "https://portfolio-view-edc28-default-rtdb.firebaseio.com",
+      projectId: "portfolio-view-edc28",
+      storageBucket: "portfolio-view-edc28.appspot.com",
+      messagingSenderId: "693092981405",
+      appId: "1:693092981405:web:05164f7f065e3e4d911274"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    function PostData() {
+      const obj = {
+        view: 1,
+        time: new Date().toLocaleString()
+      };
+
+      const dbRef = ref(database, "views");
+      push(dbRef, obj)
+        .then(() => {
+          console.log("✅ Data Saved:", obj);
+          GetData();
+        })
+        .catch((error) => {
+          console.error("❌ Error:", error);
+        });
+    }
+    const arrray = []
+
+    function GetData() {
+      const dbRef = ref(database, "views");
+
+      onValue(dbRef, (snapshot) => {
+        const data = snapshot.val();
+        console.log("data", data);
+        const valuesArray = Object.values(data);
+        const viewsCount = valuesArray.length;
+        const formattedViews = new Intl.NumberFormat().format(viewsCount);
+        // const formattedViews = new Intl.NumberFormat().format(1000);
+        View.innerHTML = `${formattedViews} Portfolio Views`
+      });
+    }
+    PostData();
+  </script>
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: { el: ".swiper-pagination" },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      loop: true,
+    });
+  </script>
+
 </body>
 
 </html>

@@ -135,13 +135,13 @@
         left: 8%;
     }
 
-    .main-contact-form input,
+    #main-contact-form input,
     #input-message {
         width: 90%;
     }
 
     .main-contact:focus-within {
-        box-shadow: 0 5px 10px var(---main-color);
+        box-shadow: 0 5px 10px transparent;
     }
 
     .main-contact-btn {
@@ -257,7 +257,7 @@
         left: 17%;
     }
 
-    .main-contact-form input,
+    #main-contact-form input,
     #input-message {
         width: 70%;
     }
@@ -310,7 +310,7 @@
         left: 11.5%;
     }
 
-    .main-contact-form input,
+    #main-contact-form input,
     #input-message {
         width: 80%;
     }
